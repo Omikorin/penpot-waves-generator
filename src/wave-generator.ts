@@ -1,10 +1,10 @@
-type DirectionType = 'up' | 'down';
-
-type WaveType = 'wavy' | 'rectangular' | 'triangular';
+import type { DirectionType, WaveType } from './common/types';
 
 export class WaveGenerator {
   private svg: SVGElement;
   private path: SVGPathElement;
+  private width = 500;
+  private height = 200;
   private direction: DirectionType = 'up';
   private amplitude: number = 20;
   private frequency: number = 50;
@@ -49,14 +49,36 @@ export class WaveGenerator {
       this.frequency = parseInt((e.target as HTMLInputElement).value);
       this.generateWave();
     });
+
+    const createButton = document.getElementById(
+      'btn-create',
+    ) as HTMLButtonElement;
+    createButton.addEventListener('click', () => {
+      if (!this.svg) return;
+
+      const data = this.svg.outerHTML;
+
+      parent.postMessage(
+        {
+          type: 'add-svg',
+          content: {
+            data,
+            name: 'New Wave',
+          },
+        },
+        '*',
+      );
+    });
   }
 
   private generateWave() {
-    const width = 100;
-    const height = 100;
+    const width = this.width;
+    const height = this.height;
     const points: [number, number][] = [];
     const segments = Math.max(2, Math.floor(this.frequency / 10));
     const directionMultiplier = this.direction === 'up' ? 1 : -1;
+
+    console.log('freq', this.frequency)
 
     // Generate points based on wave type
     for (let i = 0; i <= width; i += width / (segments * 10)) {
