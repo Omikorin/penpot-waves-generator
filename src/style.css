@@ -95,11 +95,6 @@ section {
   background-color: var(--background-secondary);
 }
 
-#btn-randomize svg {
-  width: 16px;
-  height: 16px;
-}
-
 #wave-preview {
   width: 500px;
   height: 200px;
