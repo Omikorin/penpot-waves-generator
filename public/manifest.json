@@ -2,6 +2,7 @@
   "name": "Waves Generator",
   "description": "Create beautiful, customizable wave patterns for your web designs!",
   "code": "plugin.js",
+  "icon": "/icon.png",
   "permissions": [
     "content:read",
     "content:write",
