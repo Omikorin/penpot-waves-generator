@@ -78,8 +78,6 @@ export class WaveGenerator {
     const segments = Math.max(2, Math.floor(this.frequency / 10));
     const directionMultiplier = this.direction === 'up' ? 1 : -1;
 
-    console.log('freq', this.frequency)
-
     // Generate points based on wave type
     for (let i = 0; i <= width; i += width / (segments * 10)) {
       const x = i;
