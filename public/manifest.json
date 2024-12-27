@@ -1,6 +1,6 @@
 {
   "name": "Waves Generator",
-  "description": "Make unique SVG waves for your design",
+  "description": "Create beautiful, customizable wave patterns for your web designs!",
   "code": "plugin.js",
   "permissions": [
     "content:read",
