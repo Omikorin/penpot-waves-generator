@@ -50,6 +50,7 @@ export class WavesGenerator {
     this.generateWave(wave.id);
   }
 
+  // @ts-ignore
   private removeWave(id: string) {
     const wave = this.waves.get(id);
     if (wave) {
