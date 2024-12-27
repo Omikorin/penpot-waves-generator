@@ -108,7 +108,9 @@ section {
 }
 
 .button-group {
+  display: flex;
   justify-self: center;
+  gap: var(--spacing-12);
 }
 
 .content-footer {
