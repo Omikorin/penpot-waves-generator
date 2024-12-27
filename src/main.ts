@@ -1,11 +1,11 @@
-import { WaveGenerator } from './wave-generator';
+import { WavesGenerator } from './waves-generator';
 import './style.css';
 
 const initializeApp = () => {
   const container = document.querySelector('#wave-preview') as SVGElement;
 
   if (container) {
-    new WaveGenerator(container);
+    new WavesGenerator(container);
   }
 };
 

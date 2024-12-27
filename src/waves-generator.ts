@@ -1,6 +1,6 @@
 import type { DirectionType, WaveType } from './common/types';
 
-export class WaveGenerator {
+export class WavesGenerator {
   private svg: SVGElement;
   private path: SVGPathElement;
   private width = 500;
