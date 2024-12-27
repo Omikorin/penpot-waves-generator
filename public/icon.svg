@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="400"
+   height="400"
+   fill="none"
+   version="1.1"
+   id="svg20"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs20" />
+  <circle
+     cx="200"
+     cy="200"
+     style="fill:#ffffff;fill-opacity:1"
+     class="fills"
+     id="ellipse1"
+     r="200" />
+  <g
+     class="strokes"
+     id="g3">
+    <g
+       class="inner-stroke-shape"
+       id="g2">
+      <defs
+         id="defs1">
+        <clipPath
+           id="b">
+          <use
+             href="#a"
+             id="use1" />
+        </clipPath>
+        <circle
+           cx="200"
+           cy="200"
+           id="a"
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-opacity:1"
+           r="200" />
+      </defs>
+      <use
+         href="#a"
+         clip-path="url(#b)"
+         id="use2" />
+    </g>
+  </g>
+  <g
+     mask="url(#d)"
+     clip-path="url(#c)"
+     style="mix-blend-mode:exclusion"
+     id="g8"
+     transform="matrix(0.98901,0,0,0.98901,2.198,2.735411)">
+    <defs
+       id="defs6">
+      <filter
+         id="e"
+         x="0"
+         y="0"
+         width="1"
+         height="1">
+        <feFlood
+           flood-color="#fff"
+           result="FloodResult"
+           id="feFlood3" />
+        <feComposite
+           in="FloodResult"
+           in2="SourceGraphic"
+           operator="in"
+           result="comp"
+           id="feComposite3" />
+      </filter>
+      <clipPath
+         id="c"
+         class="mask-clip-path">
+        <polyline
+           points="0,0 400,0 400,400 0,400"
+           id="polyline3" />
+      </clipPath>
+      <mask
+         width="400"
+         maskUnits="userSpaceOnUse"
+         height="400"
+         class="mask-shape"
+         x="0"
+         id="d"
+         data-old-y="0"
+         data-old-width="400"
+         data-old-x="0"
+         y="0"
+         data-old-height="400">
+        <g
+           filter="url(#e)"
+           id="g6">
+          <circle
+             cx="200"
+             cy="200"
+             style="fill:#ffffff;fill-opacity:1"
+             class="fills"
+             id="ellipse3"
+             r="200" />
+          <g
+             class="strokes"
+             id="g5">
+            <g
+               class="inner-stroke-shape"
+               id="g4">
+              <defs
+                 id="defs3">
+                <clipPath
+                   id="g">
+                  <use
+                     href="#f"
+                     id="use3" />
+                </clipPath>
+                <circle
+                   cx="200"
+                   cy="200"
+                   id="f"
+                   style="fill:none;stroke:#ffffff;stroke-width:2;stroke-opacity:1"
+                   r="200" />
+              </defs>
+              <use
+                 href="#f"
+                 clip-path="url(#g)"
+                 id="use4" />
+            </g>
+          </g>
+        </g>
+      </mask>
+    </defs>
+    <g
+       style="mix-blend-mode:exclusion;fill:#000000"
+       id="g7">
+      <defs
+         id="defs7">
+        <linearGradient
+           id="h"
+           x1="-174.67113"
+           x2="-174.67113"
+           y1="824.40643"
+           y2="242.1694"
+           gradientTransform="scale(1.7175135,0.58223707)"
+           gradientUnits="userSpaceOnUse">
+          <stop
+             offset="0"
+             stop-color="#07bef8"
+             id="stop6" />
+          <stop
+             offset="1"
+             stop-color="#3300ca"
+             id="stop7" />
+        </linearGradient>
+      </defs>
+      <path
+         d="m 700,141 -27.8,40.6 C 644.4,222 588,304 534,310.2 477.8,316 422,248 366,204.2 311.2,160 256,140 200,162.4 144.4,186 88,252 34,281.2 -22.2,312 -78,304 -134,284 -188.8,264 -244,228 -272,211.6 l -28,-17.4 V 480 h 27.8 c 27.8,0 84.2,0 138.2,0 56.2,0 112,0 168,0 54.8,0 110,0 166,0 55.6,0 112,0 166,0 56.2,0 112,0 168,0 54.8,0 110,0 138,0 h 28 z"
+         fill="url(#h)"
+         style="fill:url(#h)"
+         class="fills"
+         id="path7" />
+    </g>
+  </g>
+  <g
+     mask="url(#j)"
+     clip-path="url(#i)"
+     style="mix-blend-mode:hard-light"
+     id="g13"
+     transform="matrix(0.98901,0,0,0.98901,2.198,2.735411)">
+    <defs
+       id="defs11">
+      <filter
+         id="k"
+         x="0"
+         y="0"
+         width="1"
+         height="1">
+        <feFlood
+           flood-color="#fff"
+           result="FloodResult"
+           id="feFlood8" />
+        <feComposite
+           in="FloodResult"
+           in2="SourceGraphic"
+           operator="in"
+           result="comp"
+           id="feComposite8" />
+      </filter>
+      <clipPath
+         id="i"
+         class="mask-clip-path">
+        <polyline
+           points="0,0 400,0 400,400 0,400"
+           id="polyline8" />
+      </clipPath>
+      <mask
+         width="400"
+         maskUnits="userSpaceOnUse"
+         height="400"
+         class="mask-shape"
+         x="0"
+         id="j"
+         data-old-y="0"
+         data-old-width="400"
+         data-old-x="0"
+         y="0"
+         data-old-height="400">
+        <g
+           filter="url(#k)"
+           id="g11">
+          <circle
+             cx="200"
+             cy="200"
+             style="fill:#ffffff;fill-opacity:1"
+             class="fills"
+             id="ellipse8"
+             r="200" />
+          <g
+             class="strokes"
+             id="g10">
+            <g
+               class="inner-stroke-shape"
+               id="g9">
+              <defs
+                 id="defs8">
+                <clipPath
+                   id="m">
+                  <use
+                     href="#l"
+                     id="use8" />
+                </clipPath>
+                <circle
+                   cx="200"
+                   cy="200"
+                   id="l"
+                   style="fill:none;stroke:#ffffff;stroke-width:2;stroke-opacity:1"
+                   r="200" />
+              </defs>
+              <use
+                 href="#l"
+                 clip-path="url(#m)"
+                 id="use9" />
+            </g>
+          </g>
+        </g>
+      </mask>
+    </defs>
+    <g
+       style="mix-blend-mode:hard-light;fill:#000000"
+       id="g12">
+      <defs
+         id="defs12">
+        <linearGradient
+           id="n"
+           x1="-177.06058"
+           x2="-177.06058"
+           y1="786.17163"
+           y2="175.61789"
+           gradientTransform="scale(1.6378575,0.61055372)"
+           gradientUnits="userSpaceOnUse">
+          <stop
+             offset="0"
+             stop-color="#3300ca"
+             id="stop11" />
+          <stop
+             offset="1"
+             stop-color="#07bef8"
+             id="stop12" />
+        </linearGradient>
+      </defs>
+      <path
+         d="m -290,478.6 12.8,-42.6 c 12.8,-42 39.2,-128 63.2,-153.2 26.6,-24.8 52,11.2 78,-6.4 25.4,-16.4 52,-86.4 76,-89.6 26.4,-2.8 52,59.2 78,52.6 25.4,-5.4 50,-79.4 76,-85.2 26.2,-6.2 52,57.8 78,57 25.2,-1.2 50,-65.2 76,-91.8 26.2,-25.4 52,-11.4 78,45.2 25,57.4 50,157.4 76,187.2 26,30.2 52,-9.8 78,-26.6 24.8,-15.2 50,-7.2 76,-31.6 25.8,-23.6 52,-81.6 78,-76.2 24.8,6.6 50,76.6 64,110.6 l 12,34.8 V 480 h -12.8 c -12.8,0 -39.2,0 -63.2,0 -26.6,0 -52,0 -78,0 -25.4,0 -52,0 -76,0 -26.4,0 -52,0 -78,0 -25.4,0 -50,0 -76,0 -26.2,0 -52,0 -78,0 -25.2,0 -50,0 -76,0 -26.2,0 -52,0 -78,0 -25,0 -50,0 -76,0 -26,0 -52,0 -78,0 -24.8,0 -50,0 -76,0 -25.8,0 -52,0 -78,0 -24.8,0 -50,0 -64,0 h -12 z"
+         fill="url(#n)"
+         style="fill:url(#n)"
+         class="fills"
+         id="path12" />
+    </g>
+  </g>
+  <g
+     mask="url(#p)"
+     clip-path="url(#o)"
+     id="g18"
+     transform="matrix(0.98901,0,0,0.98901,2.198,2.735411)">
+    <defs
+       id="defs16">
+      <filter
+         id="q"
+         x="0"
+         y="0"
+         width="1"
+         height="1">
+        <feFlood
+           flood-color="#fff"
+           result="FloodResult"
+           id="feFlood13" />
+        <feComposite
+           in="FloodResult"
+           in2="SourceGraphic"
+           operator="in"
+           result="comp"
+           id="feComposite13" />
+      </filter>
+      <clipPath
+         id="o"
+         class="mask-clip-path">
+        <polyline
+           points="1.4210854715202004e-14,0 400,0 400,400 1.4210854715202004e-14,400"
+           id="polyline13" />
+      </clipPath>
+      <mask
+         width="400"
+         maskUnits="userSpaceOnUse"
+         height="400"
+         class="mask-shape"
+         x="0"
+         id="p"
+         data-old-y="0"
+         data-old-width="400"
+         data-old-x="0"
+         y="0"
+         data-old-height="400">
+        <g
+           filter="url(#q)"
+           id="g16">
+          <circle
+             cx="200"
+             cy="200"
+             style="fill:#ffffff;fill-opacity:1"
+             class="fills"
+             id="ellipse13"
+             r="200" />
+          <g
+             class="strokes"
+             id="g15">
+            <g
+               class="inner-stroke-shape"
+               id="g14">
+              <defs
+                 id="defs13">
+                <clipPath
+                   id="s">
+                  <use
+                     href="#r"
+                     id="use13" />
+                </clipPath>
+                <circle
+                   cx="200"
+                   cy="200"
+                   id="r"
+                   style="fill:none;stroke:#ffffff;stroke-width:2;stroke-opacity:1"
+                   r="200" />
+              </defs>
+              <use
+                 href="#r"
+                 clip-path="url(#s)"
+                 id="use14" />
+            </g>
+          </g>
+        </g>
+      </mask>
+    </defs>
+    <g
+       style="fill:#000000"
+       id="g17">
+      <defs
+         id="defs17">
+        <linearGradient
+           id="t"
+           x1="-179.28474"
+           x2="-179.28474"
+           y1="776.41852"
+           y2="158.19528"
+           gradientTransform="scale(1.6175386,0.61822326)"
+           gradientUnits="userSpaceOnUse">
+          <stop
+             offset="0"
+             stop-color="#3300ca"
+             id="stop16" />
+          <stop
+             offset="1"
+             stop-color="#07bef8"
+             id="stop17" />
+        </linearGradient>
+      </defs>
+      <path
+         d="m 710,97.8 -27.8,52.8 C 654.4,204 598,308 544,370 487.8,432 432,448 376,408.8 321.2,370 266,276 210,258.6 154.4,242 98,302 44,295.6 -12.2,288 -68,214 -124,186.4 -178.8,158 -234,178 -262,186.2 l -28,9.4 V 480 h 27.8 c 27.8,0 84.2,0 138.2,0 56.2,0 112,0 168,0 54.8,0 110,0 166,0 55.6,0 112,0 166,0 56.2,0 112,0 168,0 54.8,0 110,0 138,0 h 28 z"
+         fill="url(#t)"
+         style="fill:url(#t)"
+         class="fills"
+         id="path17" />
+    </g>
+  </g>
+  <circle
+     cx="200"
+     cy="200"
+     style="fill:#ffffff;fill-opacity:0"
+     fill="none"
+     class="fills"
+     id="ellipse18"
+     r="200" />
+  <g
+     class="strokes"
+     id="g20">
+    <g
+       class="inner-stroke-shape"
+       id="g19">
+      <defs
+         id="defs18">
+        <clipPath
+           id="v">
+          <use
+             href="#u"
+             id="use18" />
+        </clipPath>
+        <circle
+           cx="200"
+           cy="200"
+           id="u"
+           style="fill:none;stroke:#ffffff;stroke-width:30;stroke-opacity:1"
+           r="200" />
+      </defs>
+      <use
+         href="#u"
+         clip-path="url(#v)"
+         id="use19" />
+    </g>
+  </g>
+</svg>
