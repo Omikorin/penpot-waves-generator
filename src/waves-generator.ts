@@ -121,6 +121,53 @@ export class WavesGenerator {
     });
   }
 
+  private generateWave(id: string) {
+    const foundWave = this.waves.get(id);
+    if (!foundWave) return;
+
+    const { path, wave } = foundWave;
+
+    const scaleX = scaleLinear()
+      .domain([0, wave.data.length - 1])
+      .range([0, this.width]);
+
+    const scaleY = scaleLinear().domain([0, 10]).range([0, this.height]);
+
+    const areaGenerator = area<number>()
+      .x((_d, i) => scaleX(i))
+      .y1((d) => scaleY(d))
+      .y0(wave.direction === 'up' ? this.height : 0)
+      .curve(this.curves[wave.curve]);
+
+    // generate path
+    const d = areaGenerator(wave.data);
+
+    if (!d) return;
+
+    // round values for better performance
+    const roundedD = d
+      .split(/M|Z/)
+      .filter((d) => d)[0]
+      .split(',')
+      .map((d) => {
+        if (d.indexOf('C') !== -1) {
+          return d
+            .split('C')
+            .map((n) => Math.round(parseFloat(n) * 10) / 10)
+            .join('C');
+        } else if (d.indexOf('L') !== -1) {
+          return d
+            .split('L')
+            .map((n) => Math.round(parseFloat(n) * 10) / 10)
+            .join('L');
+        }
+        return Math.round(parseFloat(d));
+      })
+      .join(',');
+
+    path.setAttribute('d', 'M' + roundedD + 'Z');
+  }
+
   private setupEventListeners() {
     document.querySelectorAll('.wave-type').forEach((button) => {
       button.addEventListener('click', (e) => {
@@ -167,6 +214,11 @@ export class WavesGenerator {
       });
     });
 
+    const downloadButton = document.getElementById(
+      'btn-download',
+    ) as HTMLButtonElement;
+    downloadButton.addEventListener('click', () => this.downloadSVG());
+
     const createButton = document.getElementById(
       'btn-create',
     ) as HTMLButtonElement;
@@ -186,50 +238,32 @@ export class WavesGenerator {
     });
   }
 
-  private generateWave(id: string) {
-    const foundWave = this.waves.get(id);
-    if (!foundWave) return;
+  private downloadSVG(): void {
+    if (!this.svg) return;
 
-    const { path, wave } = foundWave;
+    const svgClone = this.svg.cloneNode(true) as SVGElement;
+    svgClone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
 
-    const scaleX = scaleLinear()
-      .domain([0, wave.data.length - 1])
-      .range([0, this.width]);
+    const serializer = new XMLSerializer();
+    let source = serializer.serializeToString(svgClone);
+    source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
 
-    const scaleY = scaleLinear().domain([0, 10]).range([0, this.height]);
+    const blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
 
-    const areaGenerator = area<number>()
-      .x((_d, i) => scaleX(i))
-      .y1((d) => scaleY(d))
-      .y0(wave.direction === 'up' ? this.height : 0)
-      .curve(this.curves[wave.curve]);
+    const timestamp = new Date()
+      .toISOString()
+      .replace(/[:]/g, '-')
+      .slice(0, -5);
+    const filename = `Waves-${timestamp}.svg`;
 
-    // generate path
-    const d = areaGenerator(wave.data);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
 
-    if (!d) return;
-
-    // round values for better performance
-    const roundedD = d
-      .split(/M|Z/)
-      .filter((d) => d)[0]
-      .split(',')
-      .map((d) => {
-        if (d.indexOf('C') !== -1) {
-          return d
-            .split('C')
-            .map((n) => Math.round(parseFloat(n) * 10) / 10)
-            .join('C');
-        } else if (d.indexOf('L') !== -1) {
-          return d
-            .split('L')
-            .map((n) => Math.round(parseFloat(n) * 10) / 10)
-            .join('L');
-        }
-        return Math.round(parseFloat(d));
-      })
-      .join(',');
-
-    path.setAttribute('d', 'M' + roundedD + 'Z');
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   }
 }
