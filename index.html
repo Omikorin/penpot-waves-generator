@@ -14,7 +14,7 @@
           <div class="tab-nav">
             <ul class="tab-list">
               <li>
-                <button class="wave-type tab active" data-type="wavy">
+                <button class="wave-type tab active" data-type="wave">
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <path
                       d="M0 8C2 8 2 4 4 4S6 12 8 12s2-4 4-4 2 4 4 4"
@@ -25,7 +25,7 @@
                 </button>
               </li>
               <li>
-                <button class="wave-type tab" data-type="rectangular">
+                <button class="wave-type tab" data-type="step">
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <path
                       d="M0 8H4V4H8V8H12V4H16"
@@ -36,7 +36,7 @@
                 </button>
               </li>
               <li>
-                <button class="wave-type tab" data-type="triangular">
+                <button class="wave-type tab" data-type="peak">
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <path
                       d="M0 8L4 4L8 12L12 4L16 8"
@@ -53,7 +53,7 @@
             <ul class="tab-list">
               <li>
                 <button class="direction-btn tab active" data-direction="up">
-                  <svg width="16" height="16" viewBox="0 0 16 16">
+                  <svg width="20" height="20" viewBox="0 0 16 16">
                     <path
                       d="M4 10L8 6L12 10"
                       stroke="currentColor"
@@ -64,7 +64,7 @@
               </li>
               <li>
                 <button class="direction-btn tab" data-direction="down">
-                  <svg width="16" height="16" viewBox="0 0 16 16">
+                  <svg width="20" height="20" viewBox="0 0 16 16">
                     <path
                       d="M4 6L8 10L12 6"
                       stroke="currentColor"
@@ -78,14 +78,26 @@
 
           <div class="slider-container">
             <input
-              id="frequency"
-              aria-label="Frequency"
+              id="complexity"
+              aria-label="Complexity"
               type="range"
-              min="1"
-              max="100"
+              min="2"
+              max="50"
               value="10"
             />
           </div>
+
+          <button id="btn-randomize" aria-label="Randomize waves">
+            <svg width="16" height="16" viewBox="0 0 16 16">
+              <path
+                d="M13.5 2L15 3.5L13.5 5M13.5 11L15 12.5L13.5 14M15 3.5H12.5C10.5 3.5 9.5 5.5 8 8C6.5 10.5 5.5 12.5 3.5 12.5H1M15 12.5H12.5C11.3 12.5 10.4 11.7 9.5 10.5M1 3.5H3.5C4.7 3.5 5.6 4.3 6.5 5.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
 
         <div id="preview">
