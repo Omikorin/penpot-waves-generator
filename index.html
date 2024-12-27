@@ -6,6 +6,113 @@
     <title>Waves Generator</title>
   </head>
   <body>
+    <main>
+      <header><span class="title-l">Let's make a wave!</span></header>
+
+      <section class="container">
+        <div class="controls">
+          <div class="tab-nav">
+            <ul class="tab-list">
+              <li>
+                <button class="wave-type tab active" data-type="wavy">
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                      d="M0 8C2 8 2 4 4 4S6 12 8 12s2-4 4-4 2 4 4 4"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button class="wave-type tab" data-type="rectangular">
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                      d="M0 8H4V4H8V8H12V4H16"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button class="wave-type tab" data-type="triangular">
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                      d="M0 8L4 4L8 12L12 4L16 8"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-nav">
+            <ul class="tab-list">
+              <li>
+                <button class="direction-btn tab active" data-direction="up">
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                      d="M4 10L8 6L12 10"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button class="direction-btn tab" data-direction="down">
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                      d="M4 6L8 10L12 6"
+                      stroke="currentColor"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="slider-container">
+            <input
+              id="frequency"
+              aria-label="Frequency"
+              type="range"
+              min="1"
+              max="100"
+              value="10"
+            />
+          </div>
+        </div>
+
+        <div id="preview">
+          <svg
+            id="wave-preview"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          ></svg>
+        </div>
+
+        <div class="button-group">
+          <button id="btn-create" data-appearance="primary">Create</button>
+        </div>
+      </section>
+
+      <footer class="content-footer">
+        <a
+          href="https://omikor.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-link"
+        >
+          Made with ❤️ by <span class="footer-accent">Omikorin</span>
+        </a>
+      </footer>
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

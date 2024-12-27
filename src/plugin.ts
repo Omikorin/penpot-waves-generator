@@ -1,4 +1,7 @@
-penpot.ui.open('Waves Generator', `?theme=${penpot.theme}`);
+penpot.ui.open('Waves Generator', `?theme=${penpot.theme}`, {
+  width: 670,
+  height: 500,
+});
 
 penpot.ui.onMessage(() => {});
 
