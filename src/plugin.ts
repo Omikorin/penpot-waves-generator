@@ -11,8 +11,14 @@ penpot.ui.onMessage<PluginEvent>((message) => {
 
     if (!data || !name) return;
 
+    const center = penpot.viewport.center;
     const group = penpot.createShapeFromSvg(data);
-    if (group) group.name = name;
+
+    if (group) {
+      group.name = name;
+      group.x = center.x;
+      group.y = center.y;
+    }
   }
 });
 
