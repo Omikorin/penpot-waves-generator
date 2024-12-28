@@ -56,6 +56,9 @@ http://localhost:4400/manifest.local.json
 
 Contributions are welcome! Feel free to submit issues and pull requests.
 
+## 🙏 Acknowledgments
+Thanks to Feather Icons for their beautiful open source icons.
+
 ## 📄 License
 
 This project is licensed under the [ISC license](./LICENSE).
