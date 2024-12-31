@@ -1,20 +1,25 @@
-import { defineConfig } from "vite";
-import livePreview from "vite-live-preview";
+import { defineConfig } from 'vite';
+import livePreview from 'vite-live-preview';
 
 export default defineConfig({
   plugins: [
     livePreview({
       reload: true,
+      config: {
+        build: {
+          sourcemap: true,
+        },
+      },
     }),
   ],
   build: {
     rollupOptions: {
       input: {
-        plugin: "src/plugin.ts",
-        index: "./index.html",
+        plugin: 'src/plugin.ts',
+        index: './index.html',
       },
       output: {
-        entryFileNames: "[name].js",
+        entryFileNames: '[name].js',
       },
     },
   },
