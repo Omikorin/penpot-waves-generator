@@ -12,6 +12,7 @@ penpot.ui.onMessage<PluginEvent>((message) => {
     if (!data || !name) return;
 
     const center = penpot.viewport.center;
+    const undoBlockId = penpot.history.undoBlockBegin();
     const group = penpot.createShapeFromSvg(data);
 
     if (group) {
@@ -19,6 +20,8 @@ penpot.ui.onMessage<PluginEvent>((message) => {
       group.x = center.x;
       group.y = center.y;
     }
+
+    penpot.history.undoBlockFinish(undoBlockId);
   }
 });
 
