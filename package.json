@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/d3-scale": "^4.0.8",
-    "@types/d3-shape": "^3.1.6",
+    "@types/d3-shape": "^3.1.7",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
     "vite-live-preview": "^0.3.2"
