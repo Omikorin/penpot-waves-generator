@@ -1,12 +1,12 @@
-import type { PluginEvent } from './common/types';
+import type { PluginEvent, PluginUIEvent } from './common/types';
 
 penpot.ui.open('Waves Generator', `?theme=${penpot.theme}`, {
   width: 670,
   height: 500,
 });
 
-penpot.ui.onMessage<PluginEvent>((message) => {
-  if (message.type === 'add-svg') {
+penpot.ui.onMessage<PluginUIEvent>((message) => {
+  if (message.type === 'create-pattern') {
     const { data, name } = message.content;
 
     if (!data || !name) return;
@@ -27,9 +27,9 @@ penpot.ui.onMessage<PluginEvent>((message) => {
 
 // Update the theme in the iframe
 penpot.on('themechange', (theme) => {
-  penpot.ui.sendMessage({
-    source: 'penpot',
-    type: 'themechange',
-    theme,
-  });
+  sendMessage({ type: 'themechange', content: theme });
 });
+
+const sendMessage = (message: PluginEvent) => {
+  penpot.ui.sendMessage(message);
+};

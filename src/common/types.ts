@@ -1,3 +1,5 @@
+import type { Theme } from '@penpot/plugin-types';
+
 export type DirectionType = 'up' | 'down';
 
 export type CurveType = 'wave' | 'step' | 'peak';
@@ -16,12 +18,19 @@ export interface Wave {
 }
 
 // Penpot integration types
-export interface PluginAddSVGEvent {
-  type: 'add-svg';
+export interface CreatePatternEvent {
+  type: 'create-pattern';
   content: {
     data: string;
     name: string;
   };
 }
 
-export type PluginEvent = PluginAddSVGEvent;
+export type PluginUIEvent = CreatePatternEvent;
+
+export interface ThemeChangeEvent {
+  type: 'themechange';
+  content: Theme;
+}
+
+export type PluginEvent = ThemeChangeEvent;

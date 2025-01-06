@@ -19,10 +19,16 @@
 
       <section class="container">
         <div class="controls">
+          <!-- Wave Type Selector -->
           <div class="tab-nav">
             <ul class="tab-list">
               <li>
-                <button class="wave-type tab active" data-type="wave">
+                <button
+                  class="wave-type tab active"
+                  data-type="wave"
+                  x-data="curveSelector"
+                  @click="updateCurve"
+                >
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <path
                       d="M0 8C2 8 2 4 4 4S6 12 8 12s2-4 4-4 2 4 4 4"
@@ -34,7 +40,12 @@
                 </button>
               </li>
               <li>
-                <button class="wave-type tab" data-type="step">
+                <button
+                  class="wave-type tab"
+                  data-type="step"
+                  x-data="curveSelector"
+                  @click="updateCurve"
+                >
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <path
                       d="M0 8H4V4H8V8H12V4H16"
@@ -46,7 +57,12 @@
                 </button>
               </li>
               <li>
-                <button class="wave-type tab" data-type="peak">
+                <button
+                  class="wave-type tab"
+                  data-type="peak"
+                  x-data="curveSelector"
+                  @click="updateCurve"
+                >
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <path
                       d="M0 8L4 4L8 12L12 4L16 8"
@@ -60,10 +76,16 @@
             </ul>
           </div>
 
+          <!-- Direction Selector -->
           <div class="tab-nav">
             <ul class="tab-list">
               <li>
-                <button class="direction-btn tab active" data-direction="up">
+                <button
+                  class="direction-btn tab active"
+                  data-direction="up"
+                  x-data="directionSelector"
+                  @click="updateDirection"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -80,7 +102,12 @@
                 </button>
               </li>
               <li>
-                <button class="direction-btn tab" data-direction="down">
+                <button
+                  class="direction-btn tab"
+                  data-direction="down"
+                  x-data="directionSelector"
+                  @click="updateDirection"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -99,6 +126,7 @@
             </ul>
           </div>
 
+          <!-- Complexity Slider -->
           <div class="slider-container">
             <svg
               class="complexity-icon"
@@ -121,6 +149,8 @@
               min="2"
               max="50"
               value="10"
+              x-data="complexitySlider"
+              @input="updateValue"
             />
 
             <svg
@@ -138,7 +168,13 @@
             </svg>
           </div>
 
-          <button id="btn-randomize" aria-label="Randomize waves">
+          <!-- Randomize Button -->
+          <button
+            id="btn-randomize"
+            aria-label="Randomize waves"
+            x-data="waveActions"
+            @click="randomize"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -158,15 +194,23 @@
           </button>
         </div>
 
+        <!-- Wave Preview -->
         <div id="preview">
           <svg id="wave-preview" viewBox="0 0 500 200"></svg>
         </div>
 
-        <div class="button-group">
-          <button id="btn-download" data-appearance="secondary">
+        <!-- Action Buttons -->
+        <div class="button-group" x-data="waveActions">
+          <button
+            id="btn-download"
+            data-appearance="secondary"
+            @click="downloadSVG"
+          >
             Download
           </button>
-          <button id="btn-create" data-appearance="primary">Create</button>
+          <button id="btn-create" data-appearance="primary" @click="createPattern">
+            Create
+          </button>
         </div>
       </section>
 
