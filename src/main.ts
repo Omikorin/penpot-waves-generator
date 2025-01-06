@@ -1,17 +1,21 @@
 import Alpine from 'alpinejs';
 import './assets/style.css';
+import { createPattern, downloadSVG, randomize } from './common/actions';
 import { initializeStore, type WaveStore } from './common/store';
 import type { PluginEvent } from './common/types';
 import { complexitySlider } from './components/complexity-slider';
 import { curveSelector } from './components/curve-selector';
 import { directionSelector } from './components/direction-selector';
-import { waveActions } from './components/wave-actions';
 
 document.addEventListener('alpine:init', () => {
   Alpine.data('curveSelector', curveSelector);
   Alpine.data('directionSelector', directionSelector);
   Alpine.data('complexitySlider', complexitySlider);
-  Alpine.data('waveActions', waveActions);
+  Alpine.data('waveActions', () => ({
+    createPattern,
+    downloadSVG,
+    randomize,
+  }));
 });
 
 window.Alpine = Alpine;

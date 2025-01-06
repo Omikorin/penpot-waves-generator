@@ -6,6 +6,10 @@ const sendMessage = (message: PluginUIEvent) => {
   parent.postMessage(message, '*');
 };
 
+export const randomize = () => {
+  (Alpine.store('wave') as WaveStore).randomize();
+};
+
 export const downloadSVG = () => {
   const svg = (Alpine.store('wave') as WaveStore).svg;
   if (!svg) return;
