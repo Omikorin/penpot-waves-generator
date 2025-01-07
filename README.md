@@ -25,7 +25,7 @@ Create beautiful, customizable wave patterns for your web designs!
 
 ## 🚀 Getting Started
 
-1. Visit the [Penpot Plugins Hub](https://penpot.app/penpothub/plugins)
+1. Visit the [Penpot Plugins Hub](https://penpot.app/penpothub/plugins/waves-generator)
 2. Click the "Install" button for Waves Generator
 3. Alternative installation: Use this manifest link in Penpot's plugin installer:
    ```
