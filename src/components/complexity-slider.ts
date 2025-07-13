@@ -1,6 +1,7 @@
 // @ts-nocheck
 
-export const complexitySlider = () => ({
+// biome-ignore lint/suspicious/noExplicitAny: false positive
+export const complexitySlider: AlpineComponent<any> = () => ({
   value: 10,
 
   init() {

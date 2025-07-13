@@ -1,6 +1,7 @@
 // @ts-nocheck
 
-export const curveSelector = () => ({
+// biome-ignore lint/suspicious/noExplicitAny: false positive
+export const curveSelector: AlpineComponent<any> = () => ({
   type: '',
   isActive: false,
 

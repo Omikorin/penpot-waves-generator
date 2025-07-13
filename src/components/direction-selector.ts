@@ -1,6 +1,7 @@
 // @ts-nocheck
 
-export const directionSelector = () => ({
+// biome-ignore lint/suspicious/noExplicitAny: false positive
+export const directionSelector: AlpineComponent<any> = () => ({
   direction: '',
   isActive: false,
 

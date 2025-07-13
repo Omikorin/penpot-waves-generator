@@ -1,0 +1,5 @@
+@import '@penpot/plugin-styles/styles.css';
+
+:root {
+  --spacing-2: calc(var(--spacing-4) / 2);
+}

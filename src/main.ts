@@ -1,5 +1,5 @@
 import Alpine from 'alpinejs';
-import './assets/style.css';
+import './assets/main.css';
 import { createPattern, downloadSVG, randomize } from './common/actions';
 import { initializeStore, type WaveStore } from './common/store';
 import type { PluginEvent } from './common/types';

@@ -1,0 +1,11 @@
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.complexity-icon {
+  color: var(--foreground-primary);
+  flex-shrink: 0;
+}

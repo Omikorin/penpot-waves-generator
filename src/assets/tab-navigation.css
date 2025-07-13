@@ -1,0 +1,29 @@
+.tab-nav {
+  border-radius: 0.5rem;
+  padding: var(--spacing-4);
+  background-color: var(--background-secondary);
+  color: var(--foreground-primary);
+}
+
+.tab-list {
+  display: flex;
+  gap: var(--spacing-2);
+
+  .tab {
+    display: flex;
+    border: none;
+    background: none;
+    padding: 8px 12px;
+    border-radius: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .tab.active {
+    background: var(--background-primary);
+  }
+
+  .direction-btn.tab {
+    padding: 6px 10px;
+  }
+}

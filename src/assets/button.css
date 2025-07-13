@@ -1,0 +1,21 @@
+#btn-randomize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+#btn-randomize:hover {
+  background-color: var(--background-secondary);
+}
+
+.button-group {
+  display: flex;
+  justify-self: center;
+  gap: var(--spacing-12);
+}
