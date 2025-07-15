@@ -1,0 +1,40 @@
+<div class="slider-container">
+  <svg
+    class="complexity-icon"
+    width="20"
+    height="20"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M2 8C2 8 4 6 8 8C12 10 14 8 14 8"
+      stroke="currentColor"
+      fill="none"
+      stroke-width="1.5"
+    />
+  </svg>
+
+  <input
+    id="complexity"
+    aria-label="Complexity"
+    type="range"
+    min="2"
+    max="50"
+    value="10"
+    x-data="complexitySlider"
+    @input="updateValue"
+  />
+
+  <svg
+    class="complexity-icon"
+    width="20"
+    height="20"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M2 8C2 8 3 4 5 6C7 8 9 4 11 6C13 8 14 8 14 8"
+      stroke="currentColor"
+      fill="none"
+      stroke-width="1.5"
+    />
+  </svg>
+</div>

@@ -1,0 +1,55 @@
+<div class="tab-nav">
+  <ul class="tab-list">
+    <li>
+      <button
+        class="wave-type tab active"
+        data-type="wave"
+        x-data="curveSelector"
+        @click="updateCurve"
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16">
+          <path
+            d="M0 8C2 8 2 4 4 4S6 12 8 12s2-4 4-4 2 4 4 4"
+            stroke="currentColor"
+            fill="none"
+            stroke-width="1.5"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="wave-type tab"
+        data-type="step"
+        x-data="curveSelector"
+        @click="updateCurve"
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16">
+          <path
+            d="M0 8H4V4H8V8H12V4H16"
+            stroke="currentColor"
+            fill="none"
+            stroke-width="1.5"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="wave-type tab"
+        data-type="peak"
+        x-data="curveSelector"
+        @click="updateCurve"
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16">
+          <path
+            d="M0 8L4 4L8 12L12 4L16 8"
+            stroke="currentColor"
+            fill="none"
+            stroke-width="1.5"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</div>
